@@ -5,9 +5,6 @@ docs_dir: pages
 site_author: ImranR98
 edit_uri: https://github.com/ImranR98/Obtainium-Wiki/edit/main/pages/
 
-extra_javascript:
-  - assets/analytics.js
-
 nav:
   - Home: index.md
   - UI Overview: ui_overview.md
@@ -27,8 +24,7 @@ theme:
     - content.action.edit
     - search.suggest
     - search.highlight
-    - search.share
-    - content.tooltips
+    - navigation.top
     
   icon:
     repo: fontawesome/brands/github
@@ -36,7 +32,6 @@ theme:
 
   palette:
     - primary: deep purple
-    - accent: green
   
 markdown_extensions:
   - admonition
@@ -74,3 +69,6 @@ plugins:
 
 extra_css:
   - stylesheets/custom.css
+
+extra_javascript:
+  - assets/analytics.js
