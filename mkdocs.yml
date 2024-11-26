@@ -19,8 +19,6 @@ theme:
   favicon: https://raw.githubusercontent.com/ImranR98/Obtainium/main/assets/graphics/icon_small.png
 
   features:
-    - navigation.instant
-    - navigation.instant.progress
     - content.action.edit
     - search.suggest
     - search.highlight
@@ -62,9 +60,36 @@ extra:
     - icon: material/web
       link: https://imranr.dev/
       name: Website
+  
+  translations:
+    en:
+      made_by: Made By
+      open_an_issue: Open an Issue
+      crowdsourced_app_configs: Crowdsourced App Configurations
+      obtainium_website: Obtainium Website
+      made_with: Made with
 
 plugins:
   - search
+  - i18n:
+      docs_structure: suffix
+      languages:
+        - locale: en
+          default: true
+          name: 🇬🇧 English
+
+        - locale: de
+          name: 🇩🇪 Deutsch
+          site_name: "Obtainium Wiki"
+          site_description: "Hilfeseite für Obtainium"
+          nav_translations:
+            UI Overview: Übersicht User Interface
+            How Apps are Tracked: Wie Apps nachverfolgt werden
+
+        - locale: "null"
+          name: Add Language
+          build: false
+          fixed_link: https://github.com/ImranR98/Obtainium-Wiki/blob/main/TRANSLATING.md
 
 extra_css:
   - stylesheets/custom.css
