@@ -87,7 +87,7 @@ plugins:
             How Apps are Tracked: Wie Apps nachverfolgt werden
 
         - locale: "null"
-          name: Add Language
+          name: ➕ Add
           build: false
           fixed_link: https://github.com/ImranR98/Obtainium-Wiki/blob/main/CONTRIBUTING.md
 
