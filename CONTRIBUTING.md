@@ -2,8 +2,8 @@
 
 You can contribute to the wiki by:
 
-- Updating the content.
-- Translating the wiki into another language.
+- Updating the content
+- Translating the wiki into another language
 
 ---
 
@@ -30,7 +30,7 @@ mkdocs serve
 
 To translate the wiki into a new language, follow these steps. Always base your translation on the English text, as English is the default language.
 
-These instructions use translating from English → Spanish as an example.
+These instructions use translating to Spanish as an example.
 
 ### 1. Update `mkdocs.yml`
 
@@ -73,7 +73,7 @@ nav_translations:
   UI Overview: Descripción general de la interfaz de usuario
 ```
 
-#### Example of `translations`
+##### Example of `translations`
 
 Some additional strings in `mkdocs.yml` under the `extra` section require translation. These look like this:
 
@@ -105,9 +105,7 @@ The `.md` files contain the main content of the wiki. To translate:
 
 If images need to be translated, this is done in the same way.
 
----
-
-### 3. Translating Admonitions
+#### Translating Admonitions
 
 When translating admonitions (e.g., `!!! info` blocks):
 
@@ -131,7 +129,7 @@ For admonitions without quotation marks, add translations in `mkdocs.yml` under 
 
 ```yaml
 admonition_translations:
-  info: Translated version of *info*
+  info: Información
 ```
 
 ---

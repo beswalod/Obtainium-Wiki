@@ -19,7 +19,7 @@ The following options are available for all apps regardless of source:
 
 Aside from those, each app has additional source-specific options. Most of those are self-explanatory and may be updated frequently, so they are not covered in this Wiki. However, some sources do have more unique behaviours that need more explanation, and these are covered below.
 
-## Currently supported App sources:
+## Currently supported App sources
 
 - Open Source - General:
     - [GitHub](https://github.com/)
