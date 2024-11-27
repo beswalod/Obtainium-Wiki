@@ -89,7 +89,7 @@ plugins:
         - locale: "null"
           name: Add Language
           build: false
-          fixed_link: https://github.com/ImranR98/Obtainium-Wiki/blob/main/TRANSLATING.md
+          fixed_link: https://github.com/ImranR98/Obtainium-Wiki/blob/main/CONTRIBUTING.md
 
 extra_css:
   - stylesheets/custom.css
