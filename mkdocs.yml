@@ -79,14 +79,13 @@ extra:
       name: Website
   
   translations:
-    en:
-      made_by: Made By
-      open_an_issue: Open an Issue
-      crowdsourced_app_configs: Crowdsourced App Configurations
-      obtainium_website: Obtainium Website
-      made_with: Made with
-      missing_translation: 'This page has not yet been translated. You are viewing the English version.'
-      help_translate: 'Help translate this page'
+    made_by: Made By
+    open_an_issue: Open an Issue
+    crowdsourced_app_configurations: Crowdsourced App Configurations
+    obtainium_website: Obtainium Website
+    made_with: Made with
+    missing_translation: 'This page has not yet been translated. You are viewing the English version.'
+    help_translate: 'Help translate this page'
 
 plugins:
   - search
@@ -96,6 +95,10 @@ plugins:
         - locale: en
           default: true
           name: 🇬🇧 English
+          # site_name for English is at the top
+          # site_description for English is at the top
+          # nav_translations for English are under the main nav key
+          # extra translations for English are under the main extra key
 
         - locale: de
           name: 🇩🇪 Deutsch

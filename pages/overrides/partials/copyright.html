@@ -1,16 +1,16 @@
-{% from "partials/macros.html" import t %}
+{% set translations = translations %}
 
 <div class="md-copyright">
     <div class="md-copyright__inner">
-      <span class="md-copyright__item"> {{ t('made_by', config, i18n_page_locale) }} <a href="https://github.com/ImranR98" class="md-copyright__link">ImranR98</a></span>
+      <span class="md-copyright__item"> {{ translations.made_by | default('Made by') }} <a href="https://github.com/ImranR98" class="md-copyright__link">ImranR98</a></span>
       <span class="md-copyright__separator">•</span>
-      <span class="md-copyright__item"><a href="https://github.com/ImranR98/Obtainium/issues/new/choose" class="md-copyright__link"> {{ t('open_an_issue', config, i18n_page_locale)  }} </a></span>
+      <span class="md-copyright__item"><a href="https://github.com/ImranR98/Obtainium/issues/new/choose" class="md-copyright__link"> {{ translations.open_an_issue | default('Open an Issue') }} </a></span>
       <span class="md-copyright__separator">•</span>
-      <span class="md-copyright__item"><a href="https://apps.obtainium.imranr.dev/" class="md-copyright__link"> {{ t('crowdsourced_app_configs', config, i18n_page_locale)  }} </a></span>
+      <span class="md-copyright__item"><a href="https://apps.obtainium.imranr.dev/" class="md-copyright__link"> {{ translations.crowdsourced_app_configurations | default('Crowdsourced App Configurations') }} </a></span>
       <span class="md-copyright__separator">•</span>
-      <span class="md-copyright__item"><a href="https://obtainium.imranr.dev/" class="md-copyright__link"> {{ t('obtainium_website', config, i18n_page_locale)  }} </a></span>
+      <span class="md-copyright__item"><a href="https://obtainium.imranr.dev/" class="md-copyright__link"> {{ translations.obtainium_website | default('Obtainium Website') }} </a></span>
     </div>
     <div class="md-copyright__material">
-      {{ t('made_with', config, i18n_page_locale)  }} <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a>
+      {{ translations.made_for | default('Made For') }} <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a>
     </div>
   </div>

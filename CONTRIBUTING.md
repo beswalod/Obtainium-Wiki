@@ -53,6 +53,7 @@ These fields are not mandatory but are recommended if possible:
 - `site_name`: Specify the name of the site in your language.
 - `site_description`: Provide a brief description of the site in your language.
 - `nav_translations`: Translate navigation menu items.
+- `translations`: Other items to translate
 
 ##### Example of `nav_translations`
 
@@ -70,6 +71,26 @@ You can translate it as follows:
 nav_translations:
   Home: Hogar
   UI Overview: Descripción general de la interfaz de usuario
+```
+
+#### Example of `translations`
+
+Some additional strings in `mkdocs.yml` under the `extra` section require translation. These look like this:
+
+```yaml
+extra:
+  translations:
+    obtainium_website: Obtainium Website
+    made_with: Made with
+```
+
+You can translate it as follows:
+
+```yaml
+extra:
+  translations:
+    obtainium_website: Sitio web de Obtainium
+    made_with: Hecho con
 ```
 
 ---
@@ -111,28 +132,6 @@ For admonitions without quotation marks, add translations in `mkdocs.yml` under 
 ```yaml
 admonition_translations:
   info: Translated version of *info*
-```
-
----
-
-### 4. Translate Other Strings
-
-Some additional strings in `mkdocs.yml` under the `extra` section require translation. These look like this:
-
-```yaml
-translations:
-  en:
-    obtainium_website: Obtainium Website
-    made_with: Made with
-```
-
-Add a new section for your language code and provide translations for each string:
-
-```yaml
-translations:
-  es:
-    obtainium_website: Sitio web de Obtainium
-    made_with: Hecho con
 ```
 
 ---

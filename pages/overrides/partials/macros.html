@@ -1,5 +1,0 @@
-{% macro t(key, config, i18n_page_locale) %}
-    {% set lang = config.extra.translations.get(i18n_page_locale, {}) %}
-    {% set default_lang = config.extra.translations.en %}
-    {{ lang[key] | default(default_lang[key]) }}
-{% endmacro %}
