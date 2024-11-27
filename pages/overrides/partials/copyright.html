@@ -1,21 +1,16 @@
-{% set lang = config.extra.translations.get(i18n_page_locale, {}) %}
-{% set default_lang = config.extra.translations.en %}
-
-{% macro t(key) %}
-  {{ lang[key] | default(default_lang[key]) }}
-{% endmacro %}
+{% from "partials/macros.html" import t %}
 
 <div class="md-copyright">
     <div class="md-copyright__inner">
-      <span class="md-copyright__item"> {{ t('made_by') }} <a href="https://github.com/ImranR98" class="md-copyright__link">ImranR98</a></span>
+      <span class="md-copyright__item"> {{ t('made_by', config, i18n_page_locale) }} <a href="https://github.com/ImranR98" class="md-copyright__link">ImranR98</a></span>
       <span class="md-copyright__separator">•</span>
-      <span class="md-copyright__item"><a href="https://github.com/ImranR98/Obtainium/issues/new/choose" class="md-copyright__link"> {{ t('open_an_issue') }} </a></span>
+      <span class="md-copyright__item"><a href="https://github.com/ImranR98/Obtainium/issues/new/choose" class="md-copyright__link"> {{ t('open_an_issue', config, i18n_page_locale)  }} </a></span>
       <span class="md-copyright__separator">•</span>
-      <span class="md-copyright__item"><a href="https://apps.obtainium.imranr.dev/" class="md-copyright__link"> {{ t('crowdsourced_app_configs') }} </a></span>
+      <span class="md-copyright__item"><a href="https://apps.obtainium.imranr.dev/" class="md-copyright__link"> {{ t('crowdsourced_app_configs', config, i18n_page_locale)  }} </a></span>
       <span class="md-copyright__separator">•</span>
-      <span class="md-copyright__item"><a href="https://obtainium.imranr.dev/" class="md-copyright__link"> {{ t('obtainium_website') }} </a></span>
+      <span class="md-copyright__item"><a href="https://obtainium.imranr.dev/" class="md-copyright__link"> {{ t('obtainium_website', config, i18n_page_locale)  }} </a></span>
     </div>
     <div class="md-copyright__material">
-      {{ t('made_with') }} <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a>
+      {{ t('made_with', config, i18n_page_locale)  }} <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a>
     </div>
   </div>
