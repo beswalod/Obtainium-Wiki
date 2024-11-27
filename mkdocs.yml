@@ -68,6 +68,8 @@ extra:
       crowdsourced_app_configs: Crowdsourced App Configurations
       obtainium_website: Obtainium Website
       made_with: Made with
+      missing_translation: 'This page has not yet been translated. You are viewing the English version.'
+      help_translate: 'Help translate this page'
 
 plugins:
   - search

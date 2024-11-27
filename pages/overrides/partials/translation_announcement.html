@@ -1,0 +1,49 @@
+{% from "partials/macros.html" import t %}
+
+{% if page.meta and i18n_page_locale != "en" and i18n_file_locale != i18n_page_locale %}
+  <div class="translation-banner">
+    <a href="https://github.com/ImranR98/Obtainium-Wiki/blob/main/CONTRIBUTING.md" 
+       target="_blank" 
+       class="translation-banner__link">
+      <span class="twemoji translation-banner__icon">
+        {% include ".icons/material/translate.svg" %}
+      </span>
+      <div class="translation-banner__content">
+        <p class="translation-banner__title">{{ t('missing_translation', config, i18n_page_locale) }}</p>
+        <p class="translation-banner__text">{{ t('help_translate', config, i18n_page_locale) }}</p>
+      </div>
+    </a>
+  </div>
+
+  <style>
+    .translation-banner {
+      background-color: rgba(255, 229, 100, 0.1);
+      border-left: 4px solid #ffd43b;
+      margin: 1rem 0;
+      transition: background-color 0.2s;
+    }
+    .translation-banner:hover {
+      background-color: rgba(255, 229, 100, 0.2);
+    }
+    .translation-banner__link {
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    .translation-banner__icon {
+      margin-right: 1rem;
+      color: #ffa000;
+    }
+    .translation-banner__content p {
+      margin: 0;
+    }
+    .translation-banner__title {
+      font-weight: 700;
+    }
+    .translation-banner__text {
+      opacity: 0.8;
+    }
+  </style>
+{% endif %}
