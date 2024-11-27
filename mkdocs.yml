@@ -79,7 +79,7 @@ extra:
       name: Website
   
   translations:
-    made_by: Made By
+    made_by: Made by
     open_an_issue: Open an Issue
     crowdsourced_app_configurations: Crowdsourced App Configurations
     obtainium_website: Obtainium Website
