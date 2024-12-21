@@ -37,10 +37,8 @@ Aside from those, each app has additional source-specific options. Most of those
     - [Tencent App Store](https://sj.qq.com/)
     - Jenkins Jobs
     - [APKMirror](https://apkmirror.com/) (Track-Only)
-- Open Source - App-Specific:
+- App-Specific:
     - [VLC](https://videolan.org/)
-- Other - App-Specific:
-    - [WhatsApp](https://whatsapp.com)
     - [Telegram App](https://telegram.org)
     - [Neutron Code](https://neutroncode.com)
 - Direct APK Link
