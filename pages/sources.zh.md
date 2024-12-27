@@ -95,5 +95,6 @@ HTML 源的工作原理：
 - HTML：请注意，HTML 源包括默认的请求标头，这些标头应适用于大多数网站。在某些情况下（例如 [SourceForge](https://sourceforge.net/)），您可能需要删除它们（也有可能需要自定义）。
 - Codeberg：该源的附加选项几乎与 GitHub 相同。
 - F-Droid：任何来自 F-Droid 的应用都可能使用不同的密钥[签名](https://developer.android.com/studio/publish/app-signing)，与其它源的相同应用不同。这意味着从 F-Droid 发布的特定应用更新到来自其它源（如 GitHub）的应用很可能会失败。
+- 腾讯应用宝：来自该源的 APK 可能为纯 32 位（[armeabi-v7a](https://developer.android.com/ndk/guides/abis#v7a)）架构，无法安装在使用较新 Arm 架构 SoC 的某些设备上。
 - 任何没有与之关联的特定服务器的源（如[第三方 F-Droid repos](#f-droid-third-party-repo)、Jenkins 和 SourceHut）都不会被 Obtainium 自动识别。您必须从“覆盖来源”下拉菜单中手动选择正确的源。
 - 某些源（如 APKPure）可能提供 [XAPK 文件](https://apkpure.com/xapk.html)而非 APK 文件。Obtainium 的 XAPK 支持不完整，可能无法可靠运行。
