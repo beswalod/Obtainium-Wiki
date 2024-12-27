@@ -33,7 +33,7 @@ GitLab releases sometimes contain APKs that are attached in non-standard ways, s
 === ":simple-gitlab: GitLab"
     For more reliable APK extraction from GitLab releases:
 
-    1. Login to [GitLab](https://github.com).
+    1. Login to [GitLab](https://gitlab.com).
 
     2. Go to the [personal access tokens](https://gitlab.com/-/user_settings/personal_access_tokens) section in settings.
 

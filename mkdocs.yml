@@ -108,6 +108,42 @@ plugins:
             UI Overview: Übersicht User Interface
             How Apps are Tracked: Wie Apps nachverfolgt werden
 
+        - locale: zh
+          name: 🇨🇳 简体中文（中国大陆）
+          site_name: "Obtainium Wiki"
+          site_description: "Obtainium 帮助与支持"
+          nav_translations:
+            Home: 首页
+            UI Overview: 界面概述
+            How Apps are Tracked: 如何跟踪应用
+            App Sources: 应用源
+            Settings: 设置
+          extra:
+            social:
+              - icon: simple/github
+                link: https://github.com/ImranR98/
+                name: GitHub
+              - icon: simple/mastodon
+                link: https://freeradical.zone/@imran
+                name: Mastodon
+              - icon: simple/kofi
+                link: https://ko-fi.com/imranr
+                name: Ko-fi
+              - icon: material/heart
+                link: https://github.com/sponsors/ImranR98
+                name: 通过 GitHub Sponsors 赞助
+              - icon: material/web
+                link: https://imranr.dev/
+                name: 官网
+            translations:
+              made_by: Made by
+              open_an_issue: 创建 Issue
+              crowdsourced_app_configurations: 众包应用配置
+              obtainium_website: Obtainium 官网
+              made_with: 采用
+              missing_translation: '本页尚无简体中文（中国大陆）翻译，您正在浏览的是英文原文。'
+              help_translate: '协助翻译'
+
         - locale: "null"
           name: ➕ Add
           build: false
