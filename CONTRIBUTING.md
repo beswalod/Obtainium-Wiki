@@ -11,7 +11,6 @@ You can contribute to the wiki by:
 
 When updating content, follow these guidelines:
 
-- **Clarity and Conciseness**: Ensure your changes are clear and easy to understand.
 - **Formatting**: The wiki uses [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/). Read their docs to see what kind of formatting features you can use on the site.
 - **Language**: The default language is English. If you add information in another language, you must also include the same information in English.
 
@@ -20,7 +19,7 @@ When updating content, follow these guidelines:
 You can test changes by forking the repo and downloading to your local machine. Then run:
 
 ```bash
-pip install mkdocs-static-i18n[material]
+pip install -r requirements.txt
 mkdocs serve
 ```
 
@@ -43,8 +42,8 @@ Add your language under the `languages` section in the `mkdocs.yml` file using t
 
 #### **Required Fields**
 
-- Replace `locale` with a valid [ISO-639-1](https://en.wikipedia.org/wiki/ISO_639-1) two-letter language code (e.g., `en`) or a [five-letter language code](https://www.mkdocs.org/user-guide/localizing-your-theme/#supported-locales) with territory/region (e.g., `en_US`).
-- Replace `name` with the name of the language in its native form. Precede the name with the country emoji (e.g., `🇪🇸 Español`).
+- Set `locale` to a valid [ISO-639-1](https://en.wikipedia.org/wiki/ISO_639-1) two-letter language code (e.g., `en`) or a [five-letter language code](https://www.mkdocs.org/user-guide/localizing-your-theme/#supported-locales) with territory/region (e.g., `en_US`).
+- Set `name` to the name of the language in its native form. Precede the name with the country emoji (e.g., `🇪🇸 Español`).
 
 #### **Optional Fields**
 
@@ -131,7 +130,3 @@ For admonitions without quotation marks, add translations in `mkdocs.yml` under 
 admonition_translations:
   info: Información
 ```
-
----
-
-That's it! Now you can open a pull request to get your changes merged!
