@@ -37,10 +37,7 @@ description: 一些应用源的特定信息
     - [腾讯应用宝](https://sj.qq.com/)
     - Jenkins Jobs
     - [APKMirror](https://apkmirror.com/)（仅跟踪）
-- 开源——特定应用：
-    - [VLC](https://videolan.org/)
-- 其它——特定应用：
-    - [WhatsApp](https://whatsapp.com)
+- 特定应用：
     - [Telegram 应用](https://telegram.org)
     - [Neutron Code](https://neutroncode.com)
 - 下载直链
@@ -48,15 +45,37 @@ description: 一些应用源的特定信息
 
 ## GitHub {#github}
 
-GitHub 对特定时间内的 API 请求数量设置了上限。由于 Obtainium 使用 GitHub API 抓取发布信息，因此如果你有几十个以上的来自 GitHub 源的应用，就可能会遇到“速率限制”错误。您可以按照[该说明](settings.md/#__tabbed_1_1)解决此问题。
+GitHub 对特定时间内的 API 请求数量设置了上限。由于 Obtainium 使用 GitHub API 抓取发布信息，因此如果你有几十个以上的来自 GitHub 源的应用，就可能会遇到“速率限制”错误。您可以添加个人访问令牌以解决此问题。
 
 GitHub 还允许开发者托管其应用的多个版本。这通常是指同一应用的旧版本，但也可能包括预发布版本、变体等。——因此，Obtainium 提供了各种筛选器，让您可以浏览这些版本，并准确抓取您感兴趣的版本。
 
+### 创建 GitHub 个人访问令牌 {#creating-a-github-personal-access-token}
+
+1. 登录 [GitHub](https://github.com)。
+2. 进入开发者设置中的 [Fine-grained tokens](https://github.com/settings/tokens?type=beta) 部分。
+3. 选择 **Generate new token**。
+4. 给 Token 命名并设置有效期。
+5. 滚动到底部，选择 **Generate token**。
+6. 复制 Token 并将其粘贴到 Obtainium 设置中。请立即复制您的 Token，因为您将无法再次查看。
+
 ## GitLab {#gitlab}
 
-GitLab 发行版中的 APK 有时会以非标准方式附加，导致 Obtainium 无法轻松获取。要解决这个问题，请遵循[该说明](settings.md/#__tabbed_1_2)。
+GitLab 发行版中的 APK 有时会以非标准方式附加，导致 Obtainium 无法轻松获取。GitLab API 提供了更可靠的提取 APK 的方式，但没有 API 密钥就无法使用。虽然这对大多数 GitLab 仓库来说都不是问题，但您可以在 Obtainium 的设置中添加自己的个人访问令牌，以便在极端情况下更可靠地提取 APK。
 
 与 GitHub 一样，GitLab 也允许开发者托管同一应用的旧版本，因此我们会根据情况提供其它选项。
+
+### 创建 GitLab 个人访问令牌 {#creating-a-gitlab-personal-access-token}
+
+1. 登录 [GitLab](https://gitlab.com)。
+2. 进入设置中的[个人访问令牌](https://gitlab.com/-/user_settings/personal_access_tokens)部分。
+3. 选择**添加新令牌**。
+4. 给令牌命名并设置有效期。
+5. 勾选“read_api”。
+6. 滚动到底部，选择**创建个人访问令牌**。
+7. 复制令牌并将其粘贴到 Obtainium 设置中。请立即复制您的令牌，因为您将无法再次查看。
+
+!!! info "何时需要这样做？"
+    请参阅[该解释](https://github.com/ImranR98/Obtainium/issues/3#issuecomment-1234695412)，了解 GitLab 发行版中的非标准 APK 附件
 
 ## F-Droid 第三方仓库 {#f-droid-third-party-repo}
 
