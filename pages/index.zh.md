@@ -6,6 +6,8 @@ title: 首页
 
 ---
 
+[![立即停火](https://img.shields.io/badge/%F0%9F%87%B5%F0%9F%87%B8_立即停火-techforpalestine.org-000?labelColor=grey&color=D83838)](https://techforpalestine.org/learn-more)
+
 从应用源直接获取 Android 应用更新。
 
 Obtainium 的核心目标是实现直接从应用“源”（可直接下载应用安装包的网站）下载和安装 Android 应用更新的自动化。这一过程需要自动化，因为用户可能不愿意或不能够依赖应用商店来更新特定的应用，但 Android 应用（与桌面应用不同）通常认为它们将由应用商店进行外部更新，因此不包含内置的自我更新功能。

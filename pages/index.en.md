@@ -6,6 +6,8 @@ title: Home
 
 ---
 
+[![Ceasefire Now](https://badge.techforpalestine.org/default)](https://techforpalestine.org/learn-more)
+
 Get Android app updates straight from the source.
 
 Obtainium's core goal is to automate the process of downloading and installing Android app updates directly from their "source" websites (sites where app files are available for direct download). This process needs automation since users may not be willing or able to rely on an app store to update a given app, but Android apps (unlike PC apps) usually assume they will be updated externally by an app store and therefore don't include a built-in self-update function.

@@ -72,7 +72,7 @@ Just like GitHub, GitLab also allows developers to host older releases of the sa
 ### Creating a GitLab Personal Access Token
 
 
-1. Login to [GitLab](https://github.com).
+1. Login to [GitLab](https://gitlab.com).
 
 2. Go to the [personal access tokens](https://gitlab.com/-/user_settings/personal_access_tokens) section in settings.
 
