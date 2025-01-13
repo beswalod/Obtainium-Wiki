@@ -52,7 +52,7 @@ GitHub 还允许开发者托管其应用的多个版本。这通常是指同一�
 ### 创建 GitHub 个人访问令牌 {#creating-a-github-personal-access-token}
 
 1. 登录 [GitHub](https://github.com)。
-2. 进入开发者设置中的 [Fine-grained tokens](https://github.com/settings/tokens?type=beta) 部分。
+2. 进入开发者设置中的 [Fine-grained tokens](https://github.com/settings/tokens?type=beta)。
 3. 选择 **Generate new token**。
 4. 给 Token 命名并设置有效期。
 5. 滚动到底部，选择 **Generate token**。
@@ -67,10 +67,10 @@ GitLab 发行版中的 APK 有时会以非标准方式附加，导致 Obtainium 
 ### 创建 GitLab 个人访问令牌 {#creating-a-gitlab-personal-access-token}
 
 1. 登录 [GitLab](https://gitlab.com)。
-2. 进入设置中的[个人访问令牌](https://gitlab.com/-/user_settings/personal_access_tokens)部分。
+2. 进入设置中的[个人访问令牌](https://gitlab.com/-/user_settings/personal_access_tokens)。
 3. 选择**添加新令牌**。
 4. 给令牌命名并设置有效期。
-5. 勾选“read_api”。
+5. 勾选 `read_api`。
 6. 滚动到底部，选择**创建个人访问令牌**。
 7. 复制令牌并将其粘贴到 Obtainium 设置中。请立即复制您的令牌，因为您将无法再次查看。
 
