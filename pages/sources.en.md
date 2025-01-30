@@ -72,7 +72,7 @@ Just like GitHub, GitLab also allows developers to host older releases of the sa
 ### Creating a GitLab Personal Access Token
 
 
-1. Login to [GitLab](https://github.com).
+1. Login to [GitLab](https://gitlab.com).
 
 2. Go to the [personal access tokens](https://gitlab.com/-/user_settings/personal_access_tokens) section in settings.
 
@@ -127,5 +127,6 @@ As for the "Intermediate Link" filter, if this is used, the HTML Source works as
 - HTML: Note that the HTML source includes default request headers that should be appropriate for most sites. In some cases (for example [SourceForge](https://sourceforge.net/), you may need to delete them (and possibly specify your own). 
 - Codeberg: This source is almost identical to GitHub in its additional options.
 - F-Droid: Any app from F-Droid is likely to be [signed](https://developer.android.com/studio/publish/app-signing) with a different key than releases of the same app from other sources. This means that trying to update from an F-Droid release of a given app to a release from another source (for example GitHub) is likely to fail.
+- Tencent App Store: APKs from this source may be of pure 32-bit ([armeabi-v7a](https://developer.android.com/ndk/guides/abis#v7a)) architecture and cannot be installed on some devices using newer Arm architecture SoCs.
 - Any Source that does not have a specific host associated with it (like [third-party F-Droid repos](#f-droid-third-party-repo), Jenkins instances, and SourceHut instances) will not be automatically recognized by Obtainium. You must manually pick the right source from the "Override Source" dropdown.
 - Some sources (like APKPure) may provide [XAPK files](https://apkpure.com/xapk.html) instead of APK files. Obtainium's XAPK support is incomplete and may not work reliably.
