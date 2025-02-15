@@ -37,6 +37,7 @@ Aside from those, each app has additional source-specific options. Most of those
     - [Tencent App Store](https://sj.qq.com/)
     - Jenkins Jobs
     - [APKMirror](https://apkmirror.com/) (Track-Only)
+    - [RuStore](https://rustore.ru/)
 - App-Specific:
     - [Telegram App](https://telegram.org)
     - [Neutron Code](https://neutroncode.com)
