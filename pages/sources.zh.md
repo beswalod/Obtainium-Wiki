@@ -37,6 +37,7 @@ description: 一些应用源的特定信息
     - [腾讯应用宝](https://sj.qq.com/)
     - Jenkins Jobs
     - [APKMirror](https://apkmirror.com/)（仅跟踪）
+    - [RuStore](https://rustore.ru/)
 - 特定应用：
     - [Telegram 应用](https://telegram.org)
     - [Neutron Code](https://neutroncode.com)
