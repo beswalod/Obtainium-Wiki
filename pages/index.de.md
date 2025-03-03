@@ -1,5 +1,5 @@
 ---
-title: Home
+title: Hauptseite
 ---
 
 # ![Obtainium Icon](https://raw.githubusercontent.com/ImranR98/Obtainium/main/assets/graphics/icon_small.png) Obtainium Wiki
