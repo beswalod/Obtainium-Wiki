@@ -1,5 +1,5 @@
 ---
-title: UI-Übersicht
+title: Übersicht User Interface
 description: Übersicht User Interface (UI) von Otainium
 ---
 
