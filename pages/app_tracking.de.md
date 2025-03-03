@@ -7,7 +7,7 @@ description: Wie Apps in Obtainium nachverfolgt werden
 
 ## Grundlagen
 
-Wenn Sie eine App-URL zu Obtainium hinzufügen, müssen Sie eine [App-Quelle](sources.md) auswählen. Quellen definieren, wie App-Informationen und APK-Dateien aus der von Ihnen eingegebenen URL extrahiert werden. In den meisten Fällen wählt Obtainium automatisch die entsprechende Quelle aus – um diese Auswahl zu korrigieren, wird ein Dropdown-Menü „Quelle überschreiben“ angezeigt.
+Wenn Sie eine App-URL zu Obtainium hinzufügen, müssen Sie eine [App-Quelle](sources.de.md) auswählen. Quellen definieren, wie App-Informationen und APK-Dateien aus der von Ihnen eingegebenen URL extrahiert werden. In den meisten Fällen wählt Obtainium automatisch die entsprechende Quelle aus – um diese Auswahl zu korrigieren, wird ein Dropdown-Menü „Quelle überschreiben“ angezeigt.
 
 Eine App-Quelle muss mindestens die folgenden Daten für ihre Apps bereitstellen:
 
@@ -21,7 +21,7 @@ App-Quellen können auch andere Informationen liefern – diese ermöglichen zus
 - Das Veröffentlichungsdatum der neuesten Version
 - Infos zu früheren Versionen oder Varianten der App
 
-In einer idealen Welt würde jede App-Quelle alle erforderlichen Informationen auf unkomplizierte Weise bereitstellen - mit einer einzigen App pro angegebener URL, die alle erforderlichen Informationen in einem Standardformat enthält. Dies ist jedoch oft nicht der Fall – es gibt viele verschiedene Arten, wie App-Freigaben gehandhabt werden, sogar von derselben Quelle, so dass es nicht möglich ist, einen festen Satz von Schritten zu haben, um sie alle zu behandeln. Aus diesem Grund werden Ihnen beim Hinzufügen einer App verschiedene zusätzliche Optionen angeboten, mit denen Sie die Art und Weise, wie die App- Informationen extrahiert werden, ändern können. Während die Standardeinstellungen für die meisten Apps funktionieren, sollten Sie diese Optionen kennen, um mit Sonderfällen umgehen zu können – mehr dazu auf der Seite [App-Quellen](sources.md).
+In einer idealen Welt würde jede App-Quelle alle erforderlichen Informationen auf unkomplizierte Weise bereitstellen - mit einer einzigen App pro angegebener URL, die alle erforderlichen Informationen in einem Standardformat enthält. Dies ist jedoch oft nicht der Fall – es gibt viele verschiedene Arten, wie App-Freigaben gehandhabt werden, sogar von derselben Quelle, so dass es nicht möglich ist, einen festen Satz von Schritten zu haben, um sie alle zu behandeln. Aus diesem Grund werden Ihnen beim Hinzufügen einer App verschiedene zusätzliche Optionen angeboten, mit denen Sie die Art und Weise, wie die App- Informationen extrahiert werden, ändern können. Während die Standardeinstellungen für die meisten Apps funktionieren, sollten Sie diese Optionen kennen, um mit Sonderfällen umgehen zu können – mehr dazu auf der Seite [App-Quellen](source.de.md).
 
 Hinweis: Viele Filtereinstellungen in Obtainium (einschließlich vieler quellenspezifischer optionaler Filter) verwenden [reguläre Ausdrücke](https://developer.mozilla.org/de/docs/Web/JavaScript/Guide/Regular_expressions) – Sie sollten mit diesen vertraut sein.
 
