@@ -25,62 +25,62 @@ description: Как отслеживаются приложения в Obtainium
 
 Примечание: Многие настройки фильтров в Obtainium (включая многие опциональные фильтры для конкретного источника) используют [регулярные выражения](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) - вы должны быть знакомы с ними.
 
-## Version Detection
+## Обнаружение версии
 
-When Obtainium is tracking an app that is currently installed, it grabs the version of the app from Android and compares it to the version string provided by the source. It then compares the two to decide whether an update is available or whether the install status of the app has changed. This comparison can only be made if the two versions follow the same format, which may not always be the case. For example, you could have any of these cases among others:
+Когда Obtainium отслеживает установленное приложение, он получает версию приложения из Android и сравнивает ее со строкой версии, предоставленной источником. Затем он сравнивает эти две версии, чтобы определить, доступно ли обновление или изменился ли статус установки приложения. Такое сравнение возможно только в том случае, если две версии имеют одинаковый формат, что не всегда возможно. Например, может возникнуть любой из этих случаев:
 
-1. [Obtainium](https://github.com/ImranR98/Obtainium/releases/tag/v0.14.21-beta) from GitHub:
+1. [Obtainium](https://github.com/ImranR98/Obtainium/releases/tag/v0.14.21-beta) с GitHub:
 
-    - **Android-reported app version:** `0.14.21`
-    - **Source-reported version:** `v0.14.21-beta` 
+    - **Отчетная версия приложения для Android:** `0.14.21`.
+    - **Сообщаемая версия:** `v0.14.21-beta`. 
 
-2. [Cheogram](https://git.singpolyma.net/cheogram-android/refs/2.12.8-2) from a SourceHut instance:
+2. [Cheogram](https://git.singpolyma.net/cheogram-android/refs/2.12.8-2) из экземпляра SourceHut:
 
-    - **Android-reported app version:** `2.12.8-2+free`
-    - **Source-reported version:** `2.12.8-2`
+    - **Отчетная версия приложения для Android:** `2.12.8-2+free`.
+    - **Объявленная версия:** `2.12.8-2`.
 
-3. [Tor](https://www.torproject.org/download/) from the Tor website:
+3. [Tor](https://www.torproject.org/download/) с веб-сайта Tor:
 
-    - **Android-reported app version:** `102.2.1-Release (12.5.6)`
-    - **Source-reported version:** none (no version string is provided by this HTML source so a URL hash is used instead as a 'pseudo-version')
+    - **Отчетная версия приложения для Android:** `102.2.1-Release (12.5.6)`.
+    - **Отчетная версия источника:** нет (строка версии не предоставляется этим HTML-источником, поэтому вместо нее используется хэш URL в качестве "псевдо-версии")
 
-4. [Quotable](https://github.com/Lijukay/Qwotable/releases/tag/v10) from GitHub:
+4. [Quotable](https://github.com/Lijukay/Qwotable/releases/tag/v10) с GitHub:
 
-    - **Android-reported app version:** `1`
-    - **Source-reported version:** `v10`
+    - **Отчетная версия приложения для Android:** `1`.
+    - **Отчетная версия:** `v10`
 
-Obtainium stores a list of "standard" formats which it uses to make this comparison (like `x.y.z` or `x.y`). If both versions being compared conform to the same format, the comparison will be made. If not, version detection will be disabled for that app. In some cases, Obtainium will strip off extra parts from the source string if doing so would result in a standard version (like how `v` and `-beta` are removed from Obtainium's `v0.14.21-beta`), then it can make the comparison. We never try to strip parts off the "real" OS-provided version.
+Obtainium хранит список "стандартных" форматов, которые он использует для сравнения (например, `x.y.z` или `x.y`). Если обе сравниваемые версии соответствуют одному формату, сравнение будет выполнено. Если нет, то определение версии будет отключено для этого приложения. В некоторых случаях Obtainium удалит лишние части из исходной строки, если это приведет к стандартной версии (например, как удаляются `v` и `-beta` из Obtainium `v0.14.21-beta`), и тогда он сможет провести сравнение. Мы никогда не пытаемся удалять части из "настоящей" версии, предоставляемой ОС.
 
-[This piece of code](https://github.com/ImranR98/Obtainium/blob/main/lib/providers/apps_provider.dart#L64) defines how the various "standard" formats are generated.
+[Этот фрагмент кода](https://github.com/ImranR98/Obtainium/blob/main/lib/providers/apps_provider.dart#L64) определяет, как генерируются различные "стандартные" форматы.
 
-It's always possible to expand that code to add support for more formats, but this requires careful consideration. For example if Android reports that an installed app's version is `1.2` but the source says the latest available version of that app is `1.2-4`, should we strip off the `-4` and say the two are the same (meaning there is no update available)? This may be fine in some contexts (where the `-4` is not actually indicative of a change in the app itself) but not in other contexts. So it wouldn't be a good idea to support that specific case.
+Всегда есть возможность расширить этот код, чтобы добавить поддержку большего количества форматов, но это требует тщательного рассмотрения. Например, если Android сообщает, что версия установленного приложения - `1.2`, а в источнике говорится, что последняя доступная версия этого приложения - `1.2-4`, следует ли убрать `-4` и сказать, что они одинаковы (значит, обновления нет)? Это может быть нормально в некоторых контекстах (когда `-4` не указывает на изменения в самом приложении), но не в других контекстах. Поэтому не стоит поддерживать этот конкретный случай.
 
-Version detection being turned off should not usually have a significant impact on day-to-day use. If version detection is disabled for an app, you may occasionally run into inconsistencies between the real version of the app installed on your system and the version shown in the Obtainium UI. This should only happen in two cases:
+Отключение определения версий обычно не оказывает существенного влияния на повседневную работу. Если определение версий отключено для приложения, вы можете иногда сталкиваться с несоответствием между реальной версией приложения, установленной на вашей системе, и версией, отображаемой в пользовательском интерфейсе Obtainium. Это может произойти только в двух случаях:
 
-1. If an app's version changes due to actions taken outside of Obtainium (for example if it gets updated by Google Play)
-2. If an attempt by Obtainium to [silently update](#background-updates) the app in the background fails
+1. Если версия приложения изменилась в результате действий, предпринятых вне Obtainium (например, если оно было обновлено в Google Play)
+2. Если попытка Obtainium [обновить приложение в фоновом режиме](#фоновые-обновления) не удалась
 
-In such cases, Obtainium would not be able to detect that the app's real OS version has changed and so it would not update its internal records accordingly - you would need to manually correct the inconsistency.
+В таких случаях Obtainium не сможет определить, что реальная версия ОС приложения изменилась, и не обновит свои внутренние записи соответствующим образом - вам придется вручную исправлять несоответствие.
 
-See also: [Obtainium Issue #946 Comment](https://github.com/ImranR98/Obtainium/issues/946#issuecomment-1741745587)
+См. также: [Obtainium Issue #946 Comment](https://github.com/ImranR98/Obtainium/issues/946#issuecomment-1741745587)
 
-## Background Updates
+## Фоновые обновления
 
-Obtainium checks for app updates in the background on a regular basis. You can control the frequency of these update tasks on the settings page.
+Obtainium регулярно проверяет наличие обновлений приложений в фоновом режиме. Вы можете управлять частотой этих обновлений на странице настроек.
 
-After a background update checking task is completed, any available updates are divided into 2 categories:
+После завершения фоновой проверки обновлений все доступные обновления делятся на 2 категории:
 
-1. Updates that can be applied in the background
-2. Updates that cannot be applied in the background
+1. Обновления, которые могут быть применены в фоновом режиме
+2. Обновления, которые не могут быть применены в фоновом режиме
 
-For an update to be automatically installed in the background (AKA a silent update), certain criteria should be met:
+Чтобы обновление автоматически устанавливалось в фоновом режиме (так называемое "тихое обновление"), должны соблюдаться определенные критерии:
 
-- The OS must be Android 12 or higher
-- The app being installed must target a [recent Android API level](https://developer.android.com/reference/android/content/pm/PackageInstaller.SessionParams#setRequireUserAction(int))
-- The currently installed version of the app must have been installed by Obtainium
-- You must have background updates enabled in Obtainium (both universally and for this app in particular - this is the default)
-- If there are multiple APKs available for the update, the additional options for that app must be configured such that Obtainium can filter these down to one APK
+- Операционная система должна быть Android 12 или выше
+- Устанавливаемое приложение должно быть ориентированно на [последний уровень API Android](https://developer.android.com/reference/android/content/pm/PackageInstaller.SessionParams#setRequireUserAction(int))
+- Текущая установленная версия приложения должна быть установлена из Obtainium
+- У вас должны быть включены фоновые обновления в Obtainium (как для всех приложений, так и для этого приложения в частности - по умолчанию)
+- Если для обновления доступно несколько APK, дополнительные параметры для этого приложения должны быть настроены таким образом, чтобы Obtainium мог отфильтровать их до одного APK
 
-Each available update is downloaded and installed if possible, and the user is then notified either of the update's availability or that it was installed in the background.
+Каждое доступное обновление загружается и устанавливается, если это возможно, после чего пользователь получает уведомление либо о наличии обновления, либо о том, что оно было установлено в фоновом режиме.
 
-Note that due to technical limitations, background updates can only be installed on an asynchronous, best-effort basis. So if a background update fails to install, you will not be notified of the error.
+Обратите внимание, что из-за технических ограничений фоновые обновления могут устанавливаться только асинхронно, по мере необходимости. Поэтому если фоновое обновление не удастся установить, вы не получите уведомления об ошибке.
