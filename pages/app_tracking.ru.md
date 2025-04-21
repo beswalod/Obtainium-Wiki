@@ -1,29 +1,29 @@
 ---
-title: How Apps are Tracked
-description: How Apps are Tracked in Obtainium
+title: Как отслеживаются приложения
+description: Как отслеживаются приложения в Obtainium
 ---
 
-# How Apps are Tracked
+# Как отслеживаются приложения
 
-## Basics
+## Основные положения
 
-When you add an app URL to Obtainium, you must pick an app [source](sources.md). Sources define how app info and APK files will be extracted from the URL you enter. Most of the time, Obtainium will automatically select the appropriate source to use - when this is not possible, an "Override Source" dropdown will be presented.
+Когда вы добавляете URL-адрес приложения в Obtainium, вы должны выбрать [источник](sources.md). Источники определяют, как информация о приложении и APK-файлы будут извлечены из введенного вами URL. В большинстве случаев Obtainium автоматически выбирает подходящий источник для использования - если это невозможно, появится выпадающий список «Переопределить источник».
 
-At minimum, an app source must provide the following data for its apps:
+Источники приложений должны предоставлять как минимум следующие данные для своих приложений:
 
-- The app version (or a 'pseudo-version' - an identifier that changes for each new version of the app)
-- At least one APK download URL that corresponds to the version that was provided
+- Версия приложения (или «псевдо-версия» - идентификатор, который меняется для каждой новой версии приложения)
+- По крайней мере один URL-адрес загрузки соответствующий предоставленной версии APK
 
-App sources may also provide other info - these enable extra features or UI benefits. For example:
+Источники приложений могут предоставлять и другую информацию - она позволяет использовать дополнительные функции или преимущества пользовательского интерфейса. Например:
 
-- The app author's name
-- The app's package ID
-- The release date of the latest version
-- Info for previous versions or variants of the app
+- Имя автора приложения
+- ID пакета приложения
+- Дата выхода последней версии
+- Информация о предыдущих версиях или вариантах приложения
 
-In an ideal world, each app source would provide all required info in a straightforward way - with a single app per given URL with all required info provided in a standard format. However this is often not the case - there are many different ways app releases are handled even by the same source, so it isn't possible to have a fixed set of steps to handle them all. For this reason, you are presented with various additional options when adding an app, and these can be used to modify the way app info will be extracted. While the defaults work for most apps, you may want to understand these options to deal with edge cases - more info in the [App Sources](sources.md) section below.
+В идеальном мире каждый источник приложений мог бы предоставлять всю необходимую информацию в стандартном формате и простым способом - по одному приложению на заданный URL-адрес. Однако часто это не так - существует множество различных способов обработки релизов приложений, даже из одного и того же источника, поэтому невозможно создать фиксированный набор шагов для их обработки. По этой причине при добавлении приложения вам предлагается несколько дополнительных опций, которые можно использовать для изменения способа извлечения информации о приложении. Хотя для большинства приложений будут работать параметры по умолчанию, вы можете захотеть разобраться в этих опциях, чтобы справиться с нестандартными ситуациями - дополнительную информацию см. в разделе [Источники Приложений](sources.md) ниже.
 
-Note: Many filter settings in Obtainium (including many source-specific optional filters) make use of [regular expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) - you should be familiar with these.
+Примечание: Многие настройки фильтров в Obtainium (включая многие опциональные фильтры для конкретного источника) используют [регулярные выражения](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) - вы должны быть знакомы с ними.
 
 ## Version Detection
 
