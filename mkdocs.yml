@@ -143,6 +143,9 @@ plugins:
               missing_translation: '本页尚无简体中文（中国大陆）翻译，您正在浏览的是英文原文。'
               help_translate: '协助翻译'
 
+        - locale: "ru"
+          name: 🇷🇺 Русский 
+
         - locale: "null"
           name: ➕ Add
           build: false
